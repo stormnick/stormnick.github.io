@@ -1,0 +1,67 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.background {
+    background: url('sky3.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.profile-photo {
+    border-radius: 40%;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    font-weight: normal;
+    color: #cccccc;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.publications {
+    list-style-type: none;
+    padding: 0;
+}
+
+.publications li {
+    margin: 5px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #1e90ff;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
