@@ -1,35 +1,143 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nicholas Storm - Astrophysicist</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicholas Storm | Astrophysicist</title>
+
+  <!-- Font & Icons (all free/CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Base stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tiny overrides for the new sections -->
+  <style>
+    /* --- conference timeline --- */
+    .timeline {list-style:none; padding:0; display:grid; gap:1rem;}
+    .timeline li {border-left:2px solid var(--primary); padding-left:1rem; position:relative; line-height:1.5;}
+    .timeline li::before {content:''; position:absolute; left:-7px; top:0.45rem; width:10px; height:10px; background:var(--primary); border-radius:50%;}
+    /* metrics pill */
+    .metrics {margin:1.5rem 0; font-size:0.95rem; color:var(--text-muted);}
+    .metrics span {font-weight:600; color:#f5f7fa;}
+  </style>
 </head>
 <body>
-    <div class="background">
-        <div class="content">
-            <img src="IMG20240905123910_cropped_use.jpeg" alt="Your Photo" class="profile-photo" width="224" height="358">
-            <h1>Nicholas Storm</h1>
-            <h2>PhD Student in Astrophysics at Max Planck Institute for Astronomy in Heidelberg, Germany</h2>
-            <p>
-                I am an astrophysicist specialising in stellar spectroscopy. <br>
-                My research focuses on NLTE modeling of neutron capture elements, with GCE implications. <br>
-                Co-developer of the NLTE spectral fitting code <a href="https://github.com/TSFitPy-developers/TSFitPy" target="_blank">TSFitPy</a>.
-            </p>
-            <p>Email: storm AT mpia dot de</p>
-            <h3>First author publications</h3>
-            <ul class="publications">
-                <!-- Replace with your publications or fetch dynamically -->
-                <li><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...683A.200S/abstract">Storm, N.; Barklem, P. S.; Yakovleva, S. A.; Belyaev, A. K.; Palmeri, P.; Quinet, P.; Lodders, K.; Bergemann, M.; Hoppe, R. 2024 - 3D NLTE modelling of Y and Eu. Centre-to-limb variation and solar abundances</a></li>
-                <li><a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.525.3718S/abstract">Storm, N.; Bergemann, M. 2023 - Observational constraints on the origin of the elements - VII. NLTE analysis of Y II lines in spectra of cool stars and implications for Y as a Galactic chemical clock</a></li>
-            </ul>
-            <h3>Other links</h3>
-            <div class="social-links">
-                <a href="https://github.com/stormnick" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/STORMNICHOLAS/" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </div>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="#">Nicholas Storm</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#links">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ---------- ABOUT / HERO ----------- -->
+    <section id="about" class="hero">
+      <img
+        src="IMG20240905123910_cropped_use.jpeg"
+        alt="Photo of Nicholas Storm"
+        width="200" height="200"
+      />
+      <div class="hero-text">
+        <h1>Nicholas Storm</h1>
+        <h2>PhD Student in Astrophysics · MPIA Heidelberg</h2>
+        <p>
+          I’m an astrophysicist specialising in stellar spectroscopy.
+          My research focuses on NLTE modelling of neutron‑capture element
+          abundances and their implications for Galactic chemical evolution.
+          Lately I’ve been working on iron‑peak elements, GCE modelling, Payne neural networks, and the 4MOST spectroscopic survey.
+            In 4MOST, I’m a member of the S4 survey, IWG3 and IWG7 working groups.
+          I’m co‑developer of the open‑source NLTE spectral‑fitting code
+          <a href="https://github.com/TSFitPy-developers/TSFitPy" target="_blank" rel="noopener">TSFitPy</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------- PUBLICATIONS ----------- -->
+    <section id="publications">
+      <h3>Selected Publications (First Author)</h3>
+      <ul class="pub-list">
+        <li>
+            <a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.538.3284S/abstract" target="_blank" rel="noopener">
+                Storm N. et al. (2025) — Observational constraints on the origin of the elements. IX. 3D NLTE abundances of metals in the context of Galactic Chemical Evolution models and 4MOST
+            </a>
+        </li>
+        <li>
+          <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...683A.200S/abstract" target="_blank" rel="noopener">
+            Storm N. et al. (2024) — 3D NLTE modelling of Y and Eu. Centre-to-limb variation and solar abundances
+          </a>
+        </li>
+        <li>
+          <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.525.3718S/abstract" target="_blank" rel="noopener">
+            Storm N., Bergemann M. (2023) — Observational constraints on the origin of the elements - VII. NLTE analysis of Y II lines in spectra of cool stars and implications for Y as a Galactic chemical clock
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ---------- CONFERENCES ----------- -->
+    <section id="conferences">
+      <h3>Conferences & Talks</h3>
+      <ul class="timeline">
+        <li><strong>Jun&nbsp;2025</strong> — <em>EAS</em>, Cork, Ireland — Talk: 3D NLTE abundance of metals within GCE and 4MOST context</li>
+        <li><strong>Jun&nbsp;2025</strong> — <em>Nuclei in the Cosmos XVIII</em>, Girona, Spain — Talk: 3D NLTE abundance of iron‑peak and neutron‑capture elements within GCE context</li>
+        <li><strong>Sep&nbsp;2024</strong> — <em>Astrophysical Origins of Carbon workshop</em>, Tokyo, Japan — Talk: Impact of massive binary‑stripped stars on Galactic chemical enrichment of C (+ Ni & Eu) and constraints from observed NLTE abundance ratios</li>
+        <li><strong>Jun&nbsp;2024</strong> — <em>4MOST S4 in‑person meeting</em>, Heidelberg, Germany — Talks: Z‑complete disc survey & IWG7 overview</li>
+        <li><strong>Apr&nbsp;2024</strong> — <em>EOS meeting</em>, Brussels, Belgium — Talk: The Impact of 3D NLTE Radiative Transfer on s‑ and r‑process chemical abundances in Galactic stars</li>
+        <li><strong>Mar&nbsp;2024</strong> — <em>RT24 Workshop on Radiative Transfer Codes</em>, Heidelberg, Germany — Talk: Applications of 3D NLTE radiative transfer to stellar chemical abundance diagnostics</li>
+        <li><strong>Nov&nbsp;2023</strong> — <em>Astro3D retreat</em>, Tangalooma, Australia — Attendee</li>
+        <li><strong>Sep&nbsp;2023</strong> — <em>Nuclei in the Cosmos XVII</em>, Daejeon, South Korea — Talk: The Impact of 1D and 3D NLTE Effects on neutron‑capture elements</li>
+        <li><strong>Aug&nbsp;2023</strong> — <em>MIAPbP</em>, Munich, Germany — Talk: NLTE analysis of neutron‑capture elements</li>
+        <li><strong>May&nbsp;2023</strong> — <em>Stellar Properties from NLTE Radiative Transfer</em>, Chicago, USA — Talk: NLTE analysis of neutron‑capture elements</li>
+        <li><strong>Jan&nbsp;2023</strong> — <em>Stellar Ages and Galactic Archaeology</em>, Sexten, Italy — Talk: NLTE analysis of [Y/Mg] and their relation to stellar age</li>
+      </ul>
+    </section>
+
+    <!-- ---------- INTERESTS ----------- -->
+    <section id="interests">
+      <h3>Interests</h3>
+      <p>
+        I’m passionate about <strong>stellar spectroscopy</strong>, especially NLTE and 3D NLTE modelling.
+        My research focuses on the <strong>abundance of neutron‑capture elements</strong>, with some experience in
+          Galactic chemical evolution (GCE) modelling. I have also lately been working on machine‑learning approaches
+        for stellar abundances, particularly using The Payne neural network.
+        If your work overlaps and you’re looking for a collaborator or speaker, feel free to get in touch!
+      </p>
+    </section>
+
+    <!-- ---------- CONTACT ----------- -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <address>
+        Email: storm AT mpia.de<br />
+        Max Planck Institute for Astronomy<br />
+        Königstuhl 17, 69117 Heidelberg, Germany
+      </address>
+    </section>
+
+    <!-- ---------- LINKS / PROFILES ----------- -->
+    <section id="links">
+      <h3>Links & Profiles</h3>
+      <div class="social">
+        <a href="https://github.com/stormnick" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/STORMNICHOLAS/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://orcid.org/0000-0002-5259-3974" target="_blank" aria-label="ORCID">ORCID</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Nicholas Storm · Last updated 7 July 2025
+  </footer>
+
 </body>
 </html>
